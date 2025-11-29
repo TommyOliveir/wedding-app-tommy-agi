@@ -12,7 +12,7 @@ export const Layout = () => {
   const [isOpen, setIsOpen] = useState<boolean>(true);
   return (
     <div>
-      <LanguageSelect absolute />
+      {!isOpen && <LanguageSelect absolute />}
       <Hero />
       <Modal isOpen={isOpen} onClose={() => setIsOpen(false)}>
         <h4>{data[language].modalSelectLanguage}</h4>
