@@ -213,8 +213,7 @@ export const SelectStyled = styled("div")<{ absolute?: boolean }>(
     },
 
     "@media (max-width: 600px)": {
-      maxWidth: "100%",
-      width: "100%",
+      width: "fit-content",
     },
   })
 );
