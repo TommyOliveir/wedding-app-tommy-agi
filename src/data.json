@@ -1,0 +1,38 @@
+{
+  "english": {
+    "modalTitle": "Welcome!",
+    "modalSelectLanguage": "Please select your preferred language",
+    "greeting1": "Together with their families",
+    "greeting2": "and",
+    "greeting3": "Cordially invite you to the Nuptial Mass in celebration of their",
+    "greeting4": "HOLY MATRIMONY",
+    "greeting5": "June 13, 2026",
+    "greeting6": "Saturday",
+    "greeting7": "Piarist High School Monastery Church",
+    "greeting8": "Szeged, Hungary"
+  },
+  "italiano": {
+    "modalTitle": "Benvenuti",
+    "modalSelectLanguage": "Si prega di selezionare la lingua preferita",
+    "greeting1": "Insieme alle loro famiglie",
+    "greeting2": "e",
+    "greeting3": "Vi invitano cordialmente alla Santa Messa nuziale in occasione del loro",
+    "greeting4": "SANTO MATRIMONIO",
+    "greeting5": "13 giugno 2026",
+    "greeting6": "Sabato",
+    "greeting7": "Chiesa del Monastero del Liceo Piarista",
+    "greeting8": "Szeged, Ungheria"
+  },
+  "magyar": {
+    "modalTitle": "Üdvözlünk az esküvői alkalmazásunkban!",
+    "modalSelectLanguage": "Kérjük, válassza ki a kívánt nyelvet",
+    "greeting1": "Családjaikkal együtt",
+    "greeting2": "és",
+    "greeting3": "szeretettel meghívnak az egyházi szertartásra, hogy együtt ünnepeljük",
+    "greeting4": "HÁZASSÁGKÖTÉSÜKET",
+    "greeting5": "2026. június 13.",
+    "greeting6": "Szombat",
+    "greeting7": "Spanyol piarista vértanúk temploma",
+    "greeting8": "Szeged, Magyarország"
+  }
+}
