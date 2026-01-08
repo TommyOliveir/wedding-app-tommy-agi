@@ -34,6 +34,7 @@ const Modal = ({ isOpen = true, onClose, children }: IModalProps) => {
           background: "#ffffff",
           borderRadius: "10px",
           zIndex: 100000,
+          color: "#222221ff",
         }}
         onClick={(e) => e.stopPropagation()}
       >

@@ -94,12 +94,12 @@ export const HeroTextStyled = styled("div")({
   },
 });
 
-export const SilkenTextStyled = styled("p")({
+export const SilkenTextStyled = styled("span")({
   fontFamily: "'MonteCarlo', cursive",
   fontWeight: 800,
   fontStyle: "normal",
   fontSize: "4em",
-  color: "#222221ff",
+  color: "currentColor",
 });
 
 export const GeneralDateStyled = styled("div")({
