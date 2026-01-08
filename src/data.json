@@ -9,7 +9,8 @@
     "greeting5": "June 13, 2026",
     "greeting6": "Saturday",
     "greeting7": "Church of the Spanish Piarist Martyrs",
-    "greeting8": "Szeged, Hungary"
+    "greeting8": "Szeged, Hungary",
+    "rsvp": "Please Respond"
   },
   "italiano": {
     "modalTitle": "Benvenuti",
@@ -21,7 +22,8 @@
     "greeting5": "13 giugno 2026",
     "greeting6": "sabato",
     "greeting7": "Chiesa dei Martiri Piaristi Spagnoli",
-    "greeting8": "Seghedino, Ungheria"
+    "greeting8": "Seghedino, Ungheria",
+    "rsvp": "Per favore Respondere"
   },
   "magyar": {
     "modalTitle": "Üdvözlünk az esküvői alkalmazásunkban!",
@@ -33,6 +35,7 @@
     "greeting5": "2026. június 13.",
     "greeting6": "szombat",
     "greeting7": "Spanyol piarista vértanúk temploma",
-    "greeting8": "Szeged"
+    "greeting8": "Szeged",
+    "rsvp": "Kérem, válaszoljon"
   }
 }

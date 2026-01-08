@@ -112,7 +112,7 @@ export const DetailsSectionStyled = styled("div")({
   padding: "2rem",
   textAlign: "center",
   "@media (min-width: 600px)": {
-    padding: "0 9rem",
+    padding: "4rem 9rem",
   },
 });
 

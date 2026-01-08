@@ -1,8 +1,9 @@
 // import { Details } from "../components/Details";
+import { Details } from "../components/Details";
 import { Hero } from "../components/Hero";
 import { LanguageSelect } from "../components/LanguageSelect";
 import Modal from "../components/modal/Modal";
-// import { Footer } from "./footer/Footer";
+import { Footer } from "./footer/Footer";
 import data from "../data.json";
 import { useLanguage } from "../hooks/useLanguage";
 import { useState } from "react";
@@ -14,6 +15,16 @@ export const Layout = () => {
     <div>
       {!isOpen && <LanguageSelect absolute />}
       <Hero />
+      <Details title="RSVP">
+        <p>{data[language].rsvp}</p>
+        <iframe
+          src="https://docs.google.com/forms/d/e/1FAIpQLScDD6VnVOEuuGV6nQRJEiAKhBPqr5aEkyBucuRc-tXLC-snMw/viewform?embedded=true"
+          width="100%"
+          height="537"
+          frameBorder="1"
+        ></iframe>
+      </Details>
+
       <Modal isOpen={isOpen} onClose={() => setIsOpen(false)}>
         <h4>{data[language].modalSelectLanguage}</h4>
         <LanguageSelect />
@@ -60,7 +71,7 @@ export const Layout = () => {
         <h2>Lunch Reception</h2>
         <p>12:00 PM </p>
       </Details> */}
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 };

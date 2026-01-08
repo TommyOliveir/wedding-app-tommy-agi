@@ -3,11 +3,17 @@ import { styled } from "@mui/system";
 export const FooterStyled = styled("div")({
   marginTop: "8rem",
   textAlign: "center",
-  color: "red",
+  color: "white",
   width: "100%",
-  // backgroundColor: "#810606ff",
+  padding: "1rem 0",
+  backgroundColor: "#40695bff",
   "@media (min-width: 600px)": {
-    color: "green",
+    // color: "green",
+  },
+});
+
+export const MapscontainerStyled = styled("div")({
+  "@media (min-width: 600px)": {
     display: "flex",
   },
 });
