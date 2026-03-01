@@ -6,11 +6,39 @@
     "greeting2": "and",
     "greeting3": "Cordially invite you to the Nuptial Mass in celebration of their",
     "greeting4": "HOLY MATRIMONY",
-    "greeting5": "June 13, 2026",
-    "greeting6": "Saturday",
+    "greeting5": "Saturday, June 13, 2026 - 3:30 PM",
     "greeting7": "Church of the Spanish Piarist Martyrs",
     "greeting8": "Szeged, Hungary",
-    "rsvp": "Please Respond"
+    "rsvp": "Please Respond",
+    "quote": "\"Just like water's really made for drinking,",
+    "quote2": "Just like fire's really made for burning,",
+    "quote3": "You were made for loving.\"",
+    "details": {
+      "ceremony": {
+        "heading": "The Details",
+        "title": "Mass Celebration",
+        "description": "Nuptial Mass at the Church of the Spanish Piarist Martyrs in Szeged",
+        "description2": "Szeged is Ági's hometown, where she grew up on the Great Hungarian Plain, surrounded by calm landscapes and endless horizons. Tommy, originally from the Philippines, comes from a life by the sea. Though he sometimes misses the ocean, the wide, open horizon of Szeged gives him a nostalgic reminder of the horizon of the sea he once knew.",
+        "time": "3:30 PM"
+      },
+      "dinner": {
+        "title": "Dinner Reception",
+        "description": "Algyői Faluház (6750 Algyő, Búvár u. 5.)",
+        "description2": "A festive Hungarian wedding dinner featuring traditional flavors, carefully prepared dishes, and a warm, joyful atmosphere where all of us, family and friends celebrate together!",
+        "time": "6:00 PM"
+      },
+      "Szeged": {
+        "heading": "How to arrive in Szeged?",
+        "description": "Szeged is in the southeastern part of Hungary, in the Southern Great Plain region.",
+        "description2": "From the Budapest Airport go to  ",
+        "station": "Budapest-Nyugati Railway Station",
+        "description3": "Take the InterCity train to Szeged (approx. 2.5 hours)."
+      },
+      "party": {
+        "title": "Party",
+        "time": "9:00 PM Onwards"
+      }
+    }
   },
   "italiano": {
     "modalTitle": "Benvenuti",
@@ -19,11 +47,39 @@
     "greeting2": "e",
     "greeting3": "Vi invitano cordialmente alla Santa Messa nuziale in occasione del loro",
     "greeting4": "SANTO MATRIMONIO",
-    "greeting5": "13 giugno 2026",
-    "greeting6": "sabato",
+    "greeting5": "Sabato 13 giugno 2026 - 15:30",
     "greeting7": "Chiesa dei Martiri Piaristi Spagnoli",
     "greeting8": "Seghedino, Ungheria",
-    "rsvp": "Per favore Respondere"
+    "rsvp": "Per favore Respondere",
+    "quote": "«Come l’acqua c’è per dissetare, ",
+    "quote2": "Come il fuoco è fatto per bruciare,",
+    "quote3": "Tu sei fatto per amare.»",
+    "details": {
+      "ceremony": {
+        "heading": "I Dettagli",
+        "title": "Celebrazione della Messa",
+        "description": "Santa Messa nuziale presso la Chiesa dei Martiri Piaristi Spagnoli a Szeged",
+        "description2": "Szeged è la città natale di Ági, dove è cresciuta nella Grande Pianura ungherese, circondata da paesaggi tranquilli e orizzonti infiniti. Tommy, originario delle Filippine, proviene da una vita vicino al mare. Anche se a volte gli manca l'oceano, l'ampio e aperto orizzonte di Szeged gli dà un nostalgico ricordo dell'orizzonte del mare che una volta conosceva.",
+        "time": "15:30 "
+      },
+      "dinner": {
+        "title": "Ricevimento di cena",
+        "description": "Algyői Faluház (6750 Algyő, Búvár u. 5.)",
+        "description2": "Una festosa cena di nozze ungherese con sapori tradizionali, piatti preparati con cura e un’atmosfera calda e gioiosa in cui tuttti noi, famiglia e amici festeggiamo insieme!",
+        "time": "18:00"
+      },
+      "Szeged": {
+        "heading": "Come arrivare a Szeged?",
+        "description": "Szeged si trova nella parte sud-orientale dell'Ungheria, nella regione della Grande Pianura Meridionale.",
+        "description2": "Dall'aeroporto di Budapest vai alla ",
+        "station": "Stazione ferroviaria di Budapest-Nyugati",
+        "description3": "Prendi il treno InterCity per Szeged (circa 2,5 ore)."
+      },
+      "party": {
+        "title": "Fiesta",
+        "time": "alle 21:00 in poi"
+      }
+    }
   },
   "magyar": {
     "modalTitle": "Üdvözlünk az esküvői alkalmazásunkban!",
@@ -31,11 +87,39 @@
     "greeting1": "Családjukkal együtt",
     "greeting2": "és",
     "greeting3": "szeretettel meghívnak, hogy együtt ünnepeljük",
-    "greeting4": "EGYHÁZI HÁZASSÁGKÖTÉSÜKET",
-    "greeting5": "2026. június 13.",
-    "greeting6": "szombat",
+    "greeting4": "HÁZASSÁGKÖTÉSÜKET",
+    "greeting5": "2026. június 13., szombat – 15:30",
     "greeting7": "Spanyol piarista vértanúk temploma",
     "greeting8": "Szeged",
-    "rsvp": "Kérem, válaszoljon"
+    "rsvp": "Kérjük, jelezd részvételi szándékodat",
+    "quote": "„Ahogy a víz szomjat olt,",
+    "quote2": "és a tűz meleget ont,",
+    "quote3": "te szeretetre lettél teremtve.”",
+    "details": {
+      "ceremony": {
+        "heading": "A részletek",
+        "title": "Szentmise",
+        "description": "Egyházi házasságkötésünk ünnepe a Spanyol Piarista Vértanúk templomában, Szegeden",
+        "description2": "Ági Szegeden, az Alföldön született, békés tájak és végtelen horizontok között. Tommy,  eredetileg a Fülöp-szigetekről származik, és ezért a tenger melletti élethez volt szokva. Bár néha hiányzik neki az óceán, a Szeged körüli végtelen látóhatár visszahozza a szívébe a tenger horizontját, amely szülőhazájára emlékezteti.",
+        "time": "15:30"
+      },
+      "dinner": {
+        "title": "Vacsora",
+        "description": "Algyői Faluház (6750 Algyő, Búvár u. 5.)",
+        "description2": "Ünnepi magyar lakodalmi vacsora hagyományos ízekkel, gondosan elkészített fogásokkal és meghitt, vidám hangulattal, ahol család és barátok mind együtt ünnepelhetünk!",
+        "time": "18:00"
+      },
+      "Szeged": {
+        "heading": "Hogyan lehet eljutni Szegedre?",
+        "description": "Szeged Magyarország délkeleti részén, a Dél-alföldi régióban található.",
+        "description2": "Ha külföldről érkezel repülővel, a budapesti repülőtérről menj a ",
+        "station": "Budapest-Nyugati pályaudvarra",
+        "description3": "Szállj fel az InterCity vonatra Szeged felé (kb. 2,5 óra)."
+      },
+      "party": {
+        "title": "Buli",
+        "time": "21:00-tól"
+      }
+    }
   }
 }

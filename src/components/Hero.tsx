@@ -35,11 +35,15 @@ export const Hero = () => {
         >
           <p>{data[language].greeting4}</p>
         </p>
+        <p>{data[language].greeting5}</p>
+        <p>{data[language].greeting7}</p>
+        <p>{data[language].greeting8}</p>
         <GeneralDateStyled>
-          <p>{data[language].greeting5}</p>
-          <p>{data[language].greeting6}</p>
-          <p>{data[language].greeting7}</p>
-          <p>{data[language].greeting8}</p>
+          <br />
+          <p>{data[language].quote}</p>
+          <p>{data[language].quote2}</p>
+          <p>{data[language].quote3}</p>
+          <p>(Gen Rosso)</p>
         </GeneralDateStyled>
       </HeroTextStyled>
     </HeroStyled>

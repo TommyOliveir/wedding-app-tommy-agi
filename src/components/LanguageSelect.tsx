@@ -6,10 +6,10 @@ import { SelectStyled } from "./styles";
 type Language = keyof typeof data;
 
 type LanguageSelectProps = {
-  absolute?: boolean;
+  fixed?: boolean;
 };
 
-export const LanguageSelect = ({ absolute }: LanguageSelectProps) => {
+export const LanguageSelect = ({ fixed }: LanguageSelectProps) => {
   const { language, setLanguage } = useLanguage();
 
   const handleChange = (event: ChangeEvent<HTMLSelectElement>) => {
@@ -18,7 +18,7 @@ export const LanguageSelect = ({ absolute }: LanguageSelectProps) => {
   };
 
   return (
-    <SelectStyled absolute={absolute}>
+    <SelectStyled fixed={fixed}>
       <select id="language-select" value={language} onChange={handleChange}>
         {(Object.keys(data) as Language[]).map((lang) => (
           <option key={lang} value={lang}>

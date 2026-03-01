@@ -1,4 +1,3 @@
-// import { Details } from "../components/Details";
 import { Details } from "../components/Details";
 import { Hero } from "../components/Hero";
 import { LanguageSelect } from "../components/LanguageSelect";
@@ -13,9 +12,10 @@ export const Layout = () => {
   const [isOpen, setIsOpen] = useState<boolean>(true);
   return (
     <div>
-      {!isOpen && <LanguageSelect absolute />}
+      {!isOpen && <LanguageSelect fixed />}
       <Hero />
-      <Details title="RSVP">
+
+      {/* <Details title="RSVP">
         <p>{data[language].rsvp}</p>
         <iframe
           src="https://docs.google.com/forms/d/e/1FAIpQLScDD6VnVOEuuGV6nQRJEiAKhBPqr5aEkyBucuRc-tXLC-snMw/viewform?embedded=true"
@@ -23,6 +23,54 @@ export const Layout = () => {
           height="537"
           frameBorder="1"
         ></iframe>
+      </Details> */}
+      {language === "magyar" && (
+        <Details title="Lakodalmi visszajelzés">
+          <p>{data[language].rsvp}</p>
+          <iframe
+            src="https://docs.google.com/forms/d/e/1FAIpQLSethvscJSA6XYH_Mw5GRBtrVn_fY-d5X3Kh_sf8YML2n5s9WA/viewform?embedded=true"
+            width="100%"
+            height="537"
+            frameBorder="1"
+          >
+            Loading…
+          </iframe>
+        </Details>
+      )}
+
+      <Details title={data[language].details.ceremony.heading}>
+        <img style={{ width: "100px" }} src="/church.png" alt="church" />
+        <h2>{data[language].details.ceremony.title}</h2>
+        <p> {data[language].details.ceremony.description}</p>
+        <h2>{data[language].details.ceremony.time}</h2>
+        <p>{data[language].details.ceremony.description2}</p>
+        <img style={{ width: "100px" }} src="/dinner.png" alt="" />
+        <h2>{data[language].details.dinner.title}</h2>
+        <p> {data[language].details.dinner.description}</p>
+        <h2>{data[language].details.dinner.time}</h2>
+        <p>{data[language].details.dinner.description2}</p>
+        <img style={{ width: "100px" }} src="/dancing.png" alt="dancing" />
+        <h2>{data[language].details.party.title}</h2>
+        <h2>{data[language].details.party.time}</h2>
+      </Details>
+
+      <Details title={data[language].details.Szeged.heading}>
+        <img style={{ width: "100px" }} src="/location.png" alt="location" />
+
+        <p>
+          {data[language].details.Szeged.description}
+          <p>
+            {data[language].details.Szeged.description2}
+            <a
+              href="https://maps.app.goo.gl/JiCk9U3RVeGXkGu47"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {data[language].details.Szeged.station}
+            </a>{" "}
+            {data[language].details.Szeged.description3}
+          </p>
+        </p>
       </Details>
 
       <Modal isOpen={isOpen} onClose={() => setIsOpen(false)}>
@@ -30,40 +78,9 @@ export const Layout = () => {
         <LanguageSelect />
         <p>{data[language].modalTitle}</p>
       </Modal>
-      {/* <Details title="The Details">
-        <h2>Wedding Ceremony</h2>
-        <p> Nuptial Mass at Szeged Piarist High School Monastery Church</p>
-        <p>
-          Szeged is Ági's hometown, where she grew up on the Great Hungarian
-          Plain, surrounded by calm landscapes and endless horizons. Tommy,
-          originally from the Philippines, comes from a life by the sea. Though
-          he sometimes misses the ocean, the wide, open horizon of Szeged gives
-          him a nostalgic reminder of the horizon of the sea he once knew.
-        </p>
-        <h2>Reception</h2>
-        <p>Algyői Faluház (6750 Algyő, Búvár u. 5.)</p>
 
-        <h2>Transportation</h2>
-        <p>
-          Szeged is in the southeastern part of Hungary, in the Southern Great
-          Plain region. Encyclopedia Britannica +2 Invest Szeged +2 It lies on
-          both banks of the Tisza River, near its confluence with the Maros
-          (Mureș) River.
-          <p>
-            {" "}
-            How to get to Szeged: Go to Budapest-Nyugati Railway Station Take
-            the InterCity train to Szeged (approx. 2.5 hours).
-          </p>
-        </p>
-        <h2>Accomodation</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda,
-          facere dolor! Accusantium veniam tenetur doloremque iure similique
-          modi nobis facilis suscipit laudantium ex illo, maiores eum velit
-          error dolorem natus.
-        </p>
-      </Details> */}
-      {/* <Details title="Schedule of Events">
+      {/* 
+      <Details title="Schedule of Events">
         <img style={{ width: "100px" }} src="/church.png" alt="" />
         <h2>Mass Celebration</h2>
         <p>10:00 AM</p>

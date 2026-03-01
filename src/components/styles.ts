@@ -166,54 +166,52 @@ export const DetailsSectionStyled = styled("div")({
 //   },
 // });
 
-export const SelectStyled = styled("div")<{ absolute?: boolean }>(
-  ({ absolute }) => ({
-    display: "flex",
-    flexDirection: "column",
-    gap: "0.5rem",
-    alignItems: "flex-start",
-    width: "200px",
-    margin: "0.5rem 0",
+export const SelectStyled = styled("div")<{ fixed?: boolean }>(({ fixed }) => ({
+  display: "flex",
+  flexDirection: "column",
+  gap: "0.5rem",
+  alignItems: "flex-start",
+  width: "200px",
+  margin: "0.5rem 0",
 
-    // Apply absolute positioning only when "absolute" prop is true
-    ...(absolute && {
-      position: "absolute",
-      top: "1rem",
-      left: "1rem",
-      zIndex: 99999999,
-    }),
+  // Apply fixed positioning only when "fixed" prop is true
+  ...(fixed && {
+    position: "fixed",
+    top: "1rem",
+    left: "1rem",
+    zIndex: 99999999,
+  }),
 
-    "& select": {
-      padding: "0.5rem 0.75rem",
-      fontSize: "1rem",
-      lineHeight: 1.2,
-      borderRadius: "8px",
-      border: "1px solid #ccc",
-      backgroundColor: "#ffffff",
-      zIndex: 99999999,
-      color: "#222222",
-      appearance: "none",
-      WebkitAppearance: "none",
-      MozAppearance: "none",
-      cursor: "pointer",
-      outline: "none",
-      transition: "border-color 150ms ease, box-shadow 150ms ease",
-      boxSizing: "border-box",
+  "& select": {
+    padding: "0.5rem 0.75rem",
+    fontSize: "1rem",
+    lineHeight: 1.2,
+    borderRadius: "8px",
+    border: "1px solid #ccc",
+    backgroundColor: "#ffffff",
+    zIndex: 99999999,
+    color: "#222222",
+    appearance: "none",
+    WebkitAppearance: "none",
+    MozAppearance: "none",
+    cursor: "pointer",
+    outline: "none",
+    transition: "border-color 150ms ease, box-shadow 150ms ease",
+    boxSizing: "border-box",
 
-      "@media (min-width: 600px)": {},
-    },
+    "@media (min-width: 600px)": {},
+  },
 
-    "& select:focus": {
-      borderColor: "#2acf75ff",
-      boxShadow: "0 0 0 4px rgba(173,46,46,0.08)",
-    },
+  "& select:focus": {
+    borderColor: "#2acf75ff",
+    boxShadow: "0 0 0 4px rgba(173,46,46,0.08)",
+  },
 
-    "& option": {
-      padding: "0.25rem 0.5rem",
-    },
+  "& option": {
+    padding: "0.25rem 0.5rem",
+  },
 
-    "@media (max-width: 600px)": {
-      width: "fit-content",
-    },
-  })
-);
+  "@media (max-width: 600px)": {
+    width: "fit-content",
+  },
+}));
