@@ -74,7 +74,7 @@ export const HeroTextStyled = styled("div")({
   backgroundRepeat: "no-repeat",
   backgroundSize: "20rem",
   fontFamily: "'Petunia', serif",
-  color: "#41413fff",
+  // color: "#41413fff",
   padding: "3rem 2rem",
   display: "flex",
   flexDirection: "column",
@@ -178,9 +178,14 @@ export const SelectStyled = styled("div")<{ fixed?: boolean }>(({ fixed }) => ({
   ...(fixed && {
     position: "fixed",
     top: "1rem",
-    left: "1rem",
+    right: "1rem",
     zIndex: 99999999,
   }),
+
+  "@media (min-width: 600px)": {
+    left: "1rem",
+    top: "1rem",
+  },
 
   "& select": {
     padding: "0.5rem 0.75rem",

@@ -30,7 +30,6 @@ export const Hero = () => {
             fontSize: "1.5em",
             fontWeight: "bold",
             margin: "1rem 0",
-            color: "#222221ff",
           }}
         >
           <p>{data[language].greeting4}</p>
