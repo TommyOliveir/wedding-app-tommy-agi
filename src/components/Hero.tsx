@@ -27,9 +27,10 @@ export const Hero = () => {
         <p>{data[language].greeting3}</p>
         <p
           style={{
-            fontSize: "1.5em",
+            fontSize: "1.2em",
             fontWeight: "bold",
             margin: "1rem 0",
+            padding: "0 6rem",
           }}
         >
           <p>{data[language].greeting4}</p>

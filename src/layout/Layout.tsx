@@ -6,6 +6,8 @@ import { Footer } from "./footer/Footer";
 import data from "../data.json";
 import { useLanguage } from "../hooks/useLanguage";
 import { useState } from "react";
+import Countdown from "react-countdown";
+import { createRenderer } from "./countDown/CountDownRenderer";
 
 export const Layout = () => {
   const { language } = useLanguage();
@@ -39,19 +41,40 @@ export const Layout = () => {
       )}
 
       <Details title={data[language].details.ceremony.heading}>
-        <img style={{ width: "100px" }} src="/church.png" alt="church" />
+        <img
+          style={{ width: "100px", marginTop: "5rem" }}
+          src="/church.png"
+          alt="church"
+        />
         <h2>{data[language].details.ceremony.title}</h2>
-        <p> {data[language].details.ceremony.description}</p>
+        <p> {data[language].details.ceremony.address}</p>
         <h2>{data[language].details.ceremony.time}</h2>
         <p>{data[language].details.ceremony.description2}</p>
-        <img style={{ width: "100px" }} src="/dinner.png" alt="" />
+
+        <img
+          style={{ width: "100px", marginTop: "5rem" }}
+          src="/dinner.png"
+          alt=""
+        />
         <h2>{data[language].details.dinner.title}</h2>
         <p> {data[language].details.dinner.description}</p>
         <h2>{data[language].details.dinner.time}</h2>
         <p>{data[language].details.dinner.description2}</p>
-        <img style={{ width: "100px" }} src="/dancing.png" alt="dancing" />
+        <img
+          style={{ width: "100px", marginTop: "5rem" }}
+          src="/dancing.png"
+          alt="dancing"
+        />
         <h2>{data[language].details.party.title}</h2>
         <h2>{data[language].details.party.time}</h2>
+        <p>{data[language].details.party.description}</p>
+        <img
+          style={{ width: "100px", marginTop: "5rem" }}
+          src="/gift.png"
+          alt="gift"
+        />
+        <h2>{data[language].details.gift.title}</h2>
+        <p>{data[language].details.gift.description}</p>
       </Details>
 
       <Details title={data[language].details.Szeged.heading}>
@@ -71,6 +94,15 @@ export const Layout = () => {
             {data[language].details.Szeged.description3}
           </p>
         </p>
+      </Details>
+
+      <Details title={"countdown"}>
+        <Countdown
+          date={new Date("2026-06-13T13:30:00Z")}
+          // renderer={renderer}
+          renderer={createRenderer(language)}
+        />
+        {/* <Countdown date={new Date("2026-03-07T12:00:00")} renderer={renderer} /> */}
       </Details>
 
       <Modal isOpen={isOpen} onClose={() => setIsOpen(false)}>

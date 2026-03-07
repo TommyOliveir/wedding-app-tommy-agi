@@ -4,7 +4,7 @@
     "modalSelectLanguage": "Please select your preferred language",
     "greeting1": "Together with their families",
     "greeting2": "and",
-    "greeting3": "Cordially invite you to the Nuptial Mass in celebration of their",
+    "greeting3": "Cordially invite you to the Nuptial Mass and Dinner Reception in celebration of their",
     "greeting4": "HOLY MATRIMONY",
     "greeting5": "Saturday, June 13, 2026 - 3:30 PM",
     "greeting7": "Church of the Spanish Piarist Martyrs",
@@ -17,14 +17,14 @@
       "ceremony": {
         "heading": "The Details",
         "title": "Mass Celebration",
-        "description": "Nuptial Mass at the Church of the Spanish Piarist Martyrs in Szeged",
-        "description2": "Szeged is Ági's hometown, where she grew up on the Great Hungarian Plain, surrounded by calm landscapes and endless horizons. Tommy, originally from the Philippines, comes from a life by the sea. Though he sometimes misses the ocean, the wide, open horizon of Szeged gives him a nostalgic reminder of the horizon of the sea he once knew.",
+        "address": "Church of the Spanish Piarist Martyrs in Szeged (6724 Szeged, Bálint Sándor u. 14.)",
+        "description2": "The most important moment of the day. Join us as we exchange our eternal vows before God and begin our lifelong covenant of marriage.",
         "time": "3:30 PM"
       },
       "dinner": {
         "title": "Dinner Reception",
         "description": "Algyői Faluház (6750 Algyő, Búvár u. 5.)",
-        "description2": "A festive Hungarian wedding dinner featuring traditional flavors, carefully prepared dishes, and a warm, joyful atmosphere where all of us, family and friends celebrate together!",
+        "description2": "Let’s enjoy traditional Hungarian dishes and raise a toast to the newlyweds!",
         "time": "6:00 PM"
       },
       "Szeged": {
@@ -36,7 +36,12 @@
       },
       "party": {
         "title": "Party",
+        "description": "Let’s dance the night away—don’t forget your dancing shoes! We’ll have international hits, Filipino songs, and Hungarian favorites. Plus, something that brings both cultures together: the Money Dance! This old tradition lets you dance with the new Mr. and Mrs. at midnight—just bring a small coin or bill to celebrate with them!",
         "time": "9:00 PM Onwards"
+      },
+      "gift": {
+        "title": "Gift",
+        "description": "“The best gift is having you share in our special day, Should you wish to contribute in some other way, We would love a few pennies to put in our pot, For our future home after tying the knot.”"
       }
     }
   },
@@ -45,7 +50,7 @@
     "modalSelectLanguage": "Si prega di selezionare la lingua preferita",
     "greeting1": "Insieme alle loro famiglie",
     "greeting2": "e",
-    "greeting3": "Vi invitano cordialmente alla Santa Messa nuziale in occasione del loro",
+    "greeting3": "Vi invitano cordialmente alla Santa Messa nuziale e al Banchetto in occasione del loro",
     "greeting4": "SANTO MATRIMONIO",
     "greeting5": "Sabato 13 giugno 2026 - 15:30",
     "greeting7": "Chiesa dei Martiri Piaristi Spagnoli",
@@ -56,28 +61,35 @@
     "quote3": "Tu sei fatto per amare.»",
     "details": {
       "ceremony": {
-        "heading": "I Dettagli",
+        "heading": "I dettagli",
         "title": "Celebrazione della Messa",
         "description": "Santa Messa nuziale presso la Chiesa dei Martiri Piaristi Spagnoli a Szeged",
-        "description2": "Szeged è la città natale di Ági, dove è cresciuta nella Grande Pianura ungherese, circondata da paesaggi tranquilli e orizzonti infiniti. Tommy, originario delle Filippine, proviene da una vita vicino al mare. Anche se a volte gli manca l'oceano, l'ampio e aperto orizzonte di Szeged gli dà un nostalgico ricordo dell'orizzonte del mare che una volta conosceva.",
+        "address": "Chiesa dei Martiri Piaristi Spagnoli (6724 Szeged, Bálint Sándor u. 14.)",
+        "description2": "Il momento più importante della giornata. Unitevi a noi mentre scambiamo le nostre promesse eterne davanti a Dio e iniziamo il nostro cammino insieme nel sacro vincolo del matrimonio.",
         "time": "15:30 "
       },
       "dinner": {
-        "title": "Ricevimento di cena",
+        "title": "Banchetto",
         "description": "Algyői Faluház (6750 Algyő, Búvár u. 5.)",
-        "description2": "Una festosa cena di nozze ungherese con sapori tradizionali, piatti preparati con cura e un’atmosfera calda e gioiosa in cui tuttti noi, famiglia e amici festeggiamo insieme!",
+        "description2": "Gustiamo i piatti della tradizione ungherese e brindiamo agli sposi!",
         "time": "18:00"
       },
       "Szeged": {
         "heading": "Come arrivare a Szeged?",
         "description": "Szeged si trova nella parte sud-orientale dell'Ungheria, nella regione della Grande Pianura Meridionale.",
+        "address": "6724 Szeged, Bálint Sándor u. 14.",
         "description2": "Dall'aeroporto di Budapest vai alla ",
         "station": "Stazione ferroviaria di Budapest-Nyugati",
         "description3": "Prendi il treno InterCity per Szeged (circa 2,5 ore)."
       },
       "party": {
-        "title": "Fiesta",
+        "title": "Festa",
+        "description": "Scatenatevi sulla pista—non dimenticate le scarpe da ballo! Ci saranno successi internazionali, canzoni filippine e brani ungheresi. E qualcosa che unisce entrambe le culture: la danza del denaro! Questa antica tradizione permette di ballare con i sposi a mezzanotte: basta portare una piccola moneta o banconota per festeggiare insieme!",
         "time": "alle 21:00 in poi"
+      },
+      "gift": {
+        "title": "Regalo",
+        "description": "Il dono più bello è avervi con noi in questo giorno speciale, ma se desiderate farci un pensiero un po’ originale, piccoli contributi nel nostro salvadanaio saranno graditi, per la nostra futura casa e il cammino appena cominciati."
       }
     }
   },
@@ -86,7 +98,7 @@
     "modalSelectLanguage": "Kérjük, válaszd ki a kívánt nyelvet!",
     "greeting1": "Családjukkal együtt",
     "greeting2": "és",
-    "greeting3": "szeretettel meghívnak, hogy együtt ünnepeljük",
+    "greeting3": "szeretettel meghívnak a nászmisére és lakodalomba, hogy együtt ünnepeljük",
     "greeting4": "HÁZASSÁGKÖTÉSÜKET",
     "greeting5": "2026. június 13., szombat – 15:30",
     "greeting7": "Spanyol piarista vértanúk temploma",
@@ -100,13 +112,14 @@
         "heading": "A részletek",
         "title": "Szentmise",
         "description": "Egyházi házasságkötésünk ünnepe a Spanyol Piarista Vértanúk templomában, Szegeden",
-        "description2": "Ági Szegeden, az Alföldön született, békés tájak és végtelen horizontok között. Tommy,  eredetileg a Fülöp-szigetekről származik, és ezért a tenger melletti élethez volt szokva. Bár néha hiányzik neki az óceán, a Szeged körüli végtelen látóhatár visszahozza a szívébe a tenger horizontját, amely szülőhazájára emlékezteti.",
+        "address": "Spanyol piarista vértanúk temploma (6724 Szeged, Bálint Sándor u. 14.)",
+        "description2": "A nap legfontosabb pillanata. Tartsatok velünk, amikor Isten előtt örök fogadalmat teszünk egymásnak, és megkezdjük közös életünket a házasság szövetségében.",
         "time": "15:30"
       },
       "dinner": {
-        "title": "Vacsora",
+        "title": "Lakodalom",
         "description": "Algyői Faluház (6750 Algyő, Búvár u. 5.)",
-        "description2": "Ünnepi magyar lakodalmi vacsora hagyományos ízekkel, gondosan elkészített fogásokkal és meghitt, vidám hangulattal, ahol család és barátok mind együtt ünnepelhetünk!",
+        "description2": "Kóstoljuk végig a hagyományos magyar ételeket, és koccintsunk együtt az ifjú párra!",
         "time": "18:00"
       },
       "Szeged": {
@@ -118,7 +131,12 @@
       },
       "party": {
         "title": "Buli",
+        "description": "Na kezdődhet az ereszd el a hajamat? Reméljük, mindenki hoz tánccipőt, mert lesznek nemzetközi slágerek, filippínó dalok és magyar kedvencek. Plusz valami, ami mindkét kultúrát összeköti: a menyecsketánc. Ez a régi hagyomány lehetőséget ad, hogy éjfélkor a friss házasokkal táncoljatok—csak dobjatok egy pénzérmét vagy papírpénzt a fazékba!",
         "time": "21:00-tól"
+      },
+      "gift": {
+        "title": "Ajándék",
+        "description": "A legszebb ajándék, hogy velünk vagytok e napon. Ha mégis gondolnátok ránk valamilyen módon, köszönjük a hozzájárulásotok leendő otthonunkhoz, ahol szeretettel várunk a családi asztalhoz!"
       }
     }
   }
