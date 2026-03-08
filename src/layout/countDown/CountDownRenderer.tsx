@@ -17,7 +17,7 @@ export const createRenderer = (language: Language) => {
 
     const labels = {
       english: ["d", "h", "m", "s"],
-      italiano: ["g", "h", "m", "s"],
+      italiano: ["g", "o", "m", "s"],
       magyar: ["n", "ó", "p", "mp"],
     };
 
