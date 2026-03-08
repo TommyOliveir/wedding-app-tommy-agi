@@ -40,7 +40,7 @@ export const Layout = ({ isOpen, language }: LayoutProps) => {
           src="/e2.png"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 3 }}
+          transition={{ duration: 2 }}
           alt="open Envelope"
         />
       </EnvelopeImageWrapper>

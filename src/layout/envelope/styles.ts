@@ -29,11 +29,11 @@ export const EnvelopeOpenStyled = styled("p")({
   fontSize: ".9rem",
   position: "absolute",
   letterSpacing: "0.1rem",
-  top: "22%",
+  marginTop: "4rem",
 
   // desktop
   "@media (min-width: 600px)": {
-    top: "27%",
+    marginTop: "9rem",
     fontSize: "1.25rem",
     padding: "0.5rem 2.5rem",
   },
