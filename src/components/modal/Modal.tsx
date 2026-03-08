@@ -1,5 +1,6 @@
 import type { MouseEventHandler, ReactNode } from "react";
 import ReactDOM from "react-dom";
+import { ModalStyled } from "./styles";
 
 interface IModalProps {
   isOpen?: boolean;
@@ -25,19 +26,7 @@ const Modal = ({ isOpen = true, onClose, children }: IModalProps) => {
         zIndex: 99999,
       }}
     >
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          width: "600px",
-          padding: "2rem",
-          background: "#ffffff",
-          borderRadius: "10px",
-          zIndex: 100000,
-          color: "#222221ff",
-        }}
-        onClick={(e) => e.stopPropagation()}
-      >
+      <ModalStyled onClick={(e) => e.stopPropagation()}>
         <button
           style={{ alignSelf: "self-end", color: "#ffffff", background: "red" }}
           onClick={onClose}
@@ -45,9 +34,9 @@ const Modal = ({ isOpen = true, onClose, children }: IModalProps) => {
           &times;
         </button>
         {children}
-      </div>
+      </ModalStyled>
     </div>,
-    document.getElementById("modal-root")!
+    document.getElementById("modal-root")!,
   );
 };
 

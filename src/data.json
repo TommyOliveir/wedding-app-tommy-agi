@@ -41,7 +41,10 @@
       },
       "gift": {
         "title": "Gift",
-        "description": "“The best gift is having you share in our special day, Should you wish to contribute in some other way, We would love a few pennies to put in our pot, For our future home after tying the knot.”"
+        "description": "The best gift is having you share in our special day, Should you wish to contribute in some other way, We would love a few pennies to put in our pot, For our future home after tying the knot."
+      },
+      "countdown": {
+        "heading": "Countdown"
       }
     }
   },
@@ -90,6 +93,9 @@
       "gift": {
         "title": "Regalo",
         "description": "Il dono più bello è avervi con noi in questo giorno speciale, ma se desiderate farci un pensiero un po’ originale, piccoli contributi nel nostro salvadanaio saranno graditi, per la nostra futura casa e il cammino appena cominciati."
+      },
+      "countdown": {
+        "heading": "Conto alla rovescia"
       }
     }
   },
@@ -131,12 +137,15 @@
       },
       "party": {
         "title": "Buli",
-        "description": "Na kezdődhet az ereszd el a hajamat? Reméljük, mindenki hoz tánccipőt, mert lesznek nemzetközi slágerek, filippínó dalok és magyar kedvencek. Plusz valami, ami mindkét kultúrát összeköti: a menyecsketánc. Ez a régi hagyomány lehetőséget ad, hogy éjfélkor a friss házasokkal táncoljatok—csak dobjatok egy pénzérmét vagy papírpénzt a fazékba!",
+        "description": "Na, kezdődhet az ereszd el a hajamat? Reméljük, mindenki hoz tánccipőt, mert lesznek nemzetközi slágerek, filippínó dalok és magyar kedvencek. Plusz valami, ami mindkét kultúrát összeköti: a menyecsketánc. Ez a régi hagyomány lehetőséget ad, hogy éjfélkor a friss házasokkal táncoljatok—csak dobjatok egy pénzérmét vagy papírpénzt a fazékba!",
         "time": "21:00-tól"
       },
       "gift": {
         "title": "Ajándék",
         "description": "A legszebb ajándék, hogy velünk vagytok e napon. Ha mégis gondolnátok ránk valamilyen módon, köszönjük a hozzájárulásotok leendő otthonunkhoz, ahol szeretettel várunk a családi asztalhoz!"
+      },
+      "countdown": {
+        "heading": "Hányat kell még aludni?"
       }
     }
   }

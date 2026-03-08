@@ -1,20 +1,75 @@
 import { Details } from "../components/Details";
 import { Hero } from "../components/Hero";
 import { LanguageSelect } from "../components/LanguageSelect";
-import Modal from "../components/modal/Modal";
 import { Footer } from "./footer/Footer";
 import data from "../data.json";
-import { useLanguage } from "../hooks/useLanguage";
-import { useState } from "react";
 import Countdown from "react-countdown";
 import { createRenderer } from "./countDown/CountDownRenderer";
+import type { Language } from "../context/LanguageContext";
+import { useEffect, useState } from "react";
+import { motion } from "motion/react";
 
-export const Layout = () => {
-  const { language } = useLanguage();
-  const [isOpen, setIsOpen] = useState<boolean>(true);
+interface LayoutProps {
+  isOpen: boolean;
+  language: Language;
+}
+
+export const Layout = ({ isOpen, language }: LayoutProps) => {
+  const [step, setStep] = useState(0);
+
+  useEffect(() => {
+    const timer1 = setTimeout(() => setStep(1), 2000); // image 2
+    const timer2 = setTimeout(() => setStep(2), 4000); // layout
+
+    return () => {
+      clearTimeout(timer1);
+      clearTimeout(timer2);
+    };
+  }, []);
+
+  if (step === 0) {
+    return (
+      <motion.img
+        src="/envelop2.jpg"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 3 }}
+        style={{
+          width: "100%",
+          objectFit: "cover",
+        }}
+      />
+      // <img
+      //   src="/envelop2.jpg"
+      //   style={{ width: "100%", height: "100vh", objectFit: "cover" }}
+      //   />
+      //   </>
+    );
+  }
+
+  if (step === 1) {
+    return (
+      <motion.img
+        src="/envelop4.png"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 3 }}
+        style={{
+          width: "100%",
+          objectFit: "cover",
+        }}
+      />
+    );
+  }
+
   return (
-    <div>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 3 }}
+    >
       {!isOpen && <LanguageSelect fixed />}
+
       <Hero />
 
       {/* <Details title="RSVP">
@@ -96,7 +151,7 @@ export const Layout = () => {
         </p>
       </Details>
 
-      <Details title={"countdown"}>
+      <Details title={data[language].details.countdown.heading}>
         <Countdown
           date={new Date("2026-06-13T13:30:00Z")}
           // renderer={renderer}
@@ -105,22 +160,22 @@ export const Layout = () => {
         {/* <Countdown date={new Date("2026-03-07T12:00:00")} renderer={renderer} /> */}
       </Details>
 
-      <Modal isOpen={isOpen} onClose={() => setIsOpen(false)}>
+      {/* <Modal isOpen={isOpen} onClose={() => setIsOpen(false)}>
         <h4>{data[language].modalSelectLanguage}</h4>
         <LanguageSelect />
         <p>{data[language].modalTitle}</p>
-      </Modal>
+        </Modal> */}
 
       {/* 
       <Details title="Schedule of Events">
-        <img style={{ width: "100px" }} src="/church.png" alt="" />
-        <h2>Mass Celebration</h2>
-        <p>10:00 AM</p>
-        <img style={{ width: "100px" }} src="/church.png" alt="" />
-        <h2>Lunch Reception</h2>
-        <p>12:00 PM </p>
+      <img style={{ width: "100px" }} src="/church.png" alt="" />
+      <h2>Mass Celebration</h2>
+      <p>10:00 AM</p>
+      <img style={{ width: "100px" }} src="/church.png" alt="" />
+      <h2>Lunch Reception</h2>
+      <p>12:00 PM </p>
       </Details> */}
       <Footer />
-    </div>
+    </motion.div>
   );
 };
