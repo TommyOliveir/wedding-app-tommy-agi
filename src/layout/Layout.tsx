@@ -8,6 +8,12 @@ import { createRenderer } from "./countDown/CountDownRenderer";
 import type { Language } from "../context/LanguageContext";
 import { useEffect, useState } from "react";
 import { motion } from "motion/react";
+import {
+  EnvelopeImage,
+  EnvelopeImage2,
+  EnvelopeImageWrapper,
+  EnvelopeImageWrapper2,
+} from "./styles";
 
 interface LayoutProps {
   isOpen: boolean;
@@ -18,8 +24,8 @@ export const Layout = ({ isOpen, language }: LayoutProps) => {
   const [step, setStep] = useState(0);
 
   useEffect(() => {
-    const timer1 = setTimeout(() => setStep(1), 2000); // image 2
-    const timer2 = setTimeout(() => setStep(2), 4000); // layout
+    const timer1 = setTimeout(() => setStep(1), 1500); // image 2
+    const timer2 = setTimeout(() => setStep(2), 3000); // layout
 
     return () => {
       clearTimeout(timer1);
@@ -29,16 +35,15 @@ export const Layout = ({ isOpen, language }: LayoutProps) => {
 
   if (step === 0) {
     return (
-      <motion.img
-        src="/envelop2.jpg"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 3 }}
-        style={{
-          width: "100%",
-          objectFit: "cover",
-        }}
-      />
+      <EnvelopeImageWrapper>
+        <EnvelopeImage
+          src="/e2.png"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 3 }}
+          alt="open Envelope"
+        />
+      </EnvelopeImageWrapper>
       // <img
       //   src="/envelop2.jpg"
       //   style={{ width: "100%", height: "100vh", objectFit: "cover" }}
@@ -49,16 +54,14 @@ export const Layout = ({ isOpen, language }: LayoutProps) => {
 
   if (step === 1) {
     return (
-      <motion.img
-        src="/envelop4.png"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 3 }}
-        style={{
-          width: "100%",
-          objectFit: "cover",
-        }}
-      />
+      <EnvelopeImageWrapper2>
+        <EnvelopeImage2
+          src="/e3.png"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 2 }}
+        />
+      </EnvelopeImageWrapper2>
     );
   }
 

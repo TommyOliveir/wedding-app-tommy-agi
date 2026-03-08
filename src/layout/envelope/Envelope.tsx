@@ -1,5 +1,9 @@
 import React from "react";
-import { EnvelopeButtonStyled, EnvelopeStyled } from "./styles";
+import {
+  EnvelopeOpenStyled,
+  EnvelopeContainerStyled,
+  EnvelopeStyled,
+} from "./styles";
 
 interface EnvelopeProps {
   onOpen?: React.MouseEventHandler<HTMLElement>;
@@ -7,10 +11,9 @@ interface EnvelopeProps {
 
 export const Envelope = ({ onOpen }: EnvelopeProps) => {
   return (
-    <div>
-      <EnvelopeStyled src="/envelop.png" alt="envelop" />
-
-      <EnvelopeButtonStyled onClick={onOpen}>OPEN</EnvelopeButtonStyled>
-    </div>
+    <EnvelopeContainerStyled>
+      <EnvelopeStyled src="/e.png" alt="envelop" onClick={onOpen} />
+      <EnvelopeOpenStyled onClick={onOpen}>CLICK TO OPEN</EnvelopeOpenStyled>
+    </EnvelopeContainerStyled>
   );
 };
