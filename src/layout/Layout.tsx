@@ -6,14 +6,16 @@ import data from "../data.json";
 import Countdown from "react-countdown";
 import { createRenderer } from "./countDown/CountDownRenderer";
 import type { Language } from "../context/LanguageContext";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { motion } from "motion/react";
-import {
-  EnvelopeImage,
-  EnvelopeImage2,
-  EnvelopeImageWrapper,
-  EnvelopeImageWrapper2,
-} from "./styles";
+// import {
+//   EnvelopeImage,
+//   EnvelopeImage2,
+//   EnvelopeImageWrapper,
+//   EnvelopeImageWrapper2,
+// } from "./styles";
+import Alert from "@mui/material/Alert";
+import Stack from "@mui/material/Stack";
 
 interface LayoutProps {
   isOpen: boolean;
@@ -21,49 +23,62 @@ interface LayoutProps {
 }
 
 export const Layout = ({ isOpen, language }: LayoutProps) => {
-  const [step, setStep] = useState(0);
+  // const [step, setStep] = useState(0);
+  const [isBannerOpen, setIsBannerOpen] = useState(true);
 
-  useEffect(() => {
-    const timer1 = setTimeout(() => setStep(1), 1500); // image 2
-    const timer2 = setTimeout(() => setStep(2), 3000); // layout
+  const isWeddingDay =
+    new Date().toDateString() === new Date("2026-04-14").toDateString();
 
-    return () => {
-      clearTimeout(timer1);
-      clearTimeout(timer2);
-    };
-  }, []);
+  const labels = {
+    english: [
+      "Today is the Wedding Day! Please check the Mass Guide to follow.",
+    ],
+    italiano: [
+      "ITToday is the Wedding Day! Please check the Mass Guide to follow.",
+    ],
+    magyar: [
+      "HUToday is the Wedding Day! Please check the Mass Guide to follow.",
+    ],
+  };
 
-  if (step === 0) {
-    return (
-      <EnvelopeImageWrapper>
-        <EnvelopeImage
-          src="/e2.png"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 2 }}
-          alt="open Envelope"
-        />
-      </EnvelopeImageWrapper>
-      // <img
-      //   src="/envelop2.jpg"
-      //   style={{ width: "100%", height: "100vh", objectFit: "cover" }}
-      //   />
-      //   </>
-    );
-  }
+  const [banner] = labels[language];
 
-  if (step === 1) {
-    return (
-      <EnvelopeImageWrapper2>
-        <EnvelopeImage2
-          src="/e3.png"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 2 }}
-        />
-      </EnvelopeImageWrapper2>
-    );
-  }
+  // useEffect(() => {
+  //   const timer1 = setTimeout(() => setStep(1), 1500); // image 2
+  //   const timer2 = setTimeout(() => setStep(2), 3000); // layout
+
+  //   return () => {
+  //     clearTimeout(timer1);
+  //     clearTimeout(timer2);
+  //   };
+  // }, []);
+
+  // if (step === 0) {
+  //   return (
+  //     <EnvelopeImageWrapper>
+  //       <EnvelopeImage
+  //         src="/e2.png"
+  //         initial={{ opacity: 0 }}
+  //         animate={{ opacity: 1 }}
+  //         transition={{ duration: 2 }}
+  //         alt="open Envelope"
+  //       />
+  //     </EnvelopeImageWrapper>
+  //   );
+  // }
+
+  // if (step === 1) {
+  //   return (
+  //     <EnvelopeImageWrapper2>
+  //       <EnvelopeImage2
+  //         src="/e3.png"
+  //         initial={{ opacity: 0 }}
+  //         animate={{ opacity: 1 }}
+  //         transition={{ duration: 2 }}
+  //       />
+  //     </EnvelopeImageWrapper2>
+  //   );
+  // }
 
   return (
     <motion.div
@@ -72,9 +87,27 @@ export const Layout = ({ isOpen, language }: LayoutProps) => {
       transition={{ duration: 3 }}
     >
       {!isOpen && <LanguageSelect fixed />}
-
+      {isBannerOpen && isWeddingDay && (
+        <Stack sx={{ width: "100%" }} spacing={2}>
+          <Alert
+            severity="info"
+            onClose={() => setIsBannerOpen(false)}
+            sx={{
+              position: "fixed",
+              top: 0,
+              left: 0,
+              right: 0,
+              zIndex: 99999999999,
+            }}
+          >
+            {banner}
+            <a href="/test.pdf" target="_blank" rel="noopener noreferrer">
+              Mass Guide
+            </a>
+          </Alert>
+        </Stack>
+      )}
       <Hero />
-
       {/* <Details title="RSVP">
         <p>{data[language].rsvp}</p>
         <iframe
@@ -97,7 +130,6 @@ export const Layout = ({ isOpen, language }: LayoutProps) => {
           </iframe>
         </Details>
       )}
-
       <Details title={data[language].details.ceremony.heading}>
         <img
           style={{ width: "100px", marginTop: "5rem" }}
@@ -134,7 +166,6 @@ export const Layout = ({ isOpen, language }: LayoutProps) => {
         <h2>{data[language].details.gift.title}</h2>
         <p>{data[language].details.gift.description}</p>
       </Details>
-
       <Details title={data[language].details.Szeged.heading}>
         <img style={{ width: "100px" }} src="/location.png" alt="location" />
 
@@ -153,7 +184,6 @@ export const Layout = ({ isOpen, language }: LayoutProps) => {
           </p>
         </p>
       </Details>
-
       <Details title={data[language].details.countdown.heading}>
         <Countdown
           date={new Date("2026-06-13T13:30:00Z")}
@@ -162,13 +192,11 @@ export const Layout = ({ isOpen, language }: LayoutProps) => {
         />
         {/* <Countdown date={new Date("2026-03-07T12:00:00")} renderer={renderer} /> */}
       </Details>
-
       {/* <Modal isOpen={isOpen} onClose={() => setIsOpen(false)}>
         <h4>{data[language].modalSelectLanguage}</h4>
         <LanguageSelect />
         <p>{data[language].modalTitle}</p>
         </Modal> */}
-
       {/* 
       <Details title="Schedule of Events">
       <img style={{ width: "100px" }} src="/church.png" alt="" />

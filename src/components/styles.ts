@@ -194,7 +194,6 @@ export const SelectStyled = styled("div")<{ fixed?: boolean }>(({ fixed }) => ({
     borderRadius: "8px",
     border: "1px solid #ccc",
     backgroundColor: "#ffffff",
-    zIndex: 99999999,
     color: "#222222",
     appearance: "none",
     WebkitAppearance: "none",
