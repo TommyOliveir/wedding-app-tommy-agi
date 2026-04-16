@@ -168,7 +168,7 @@ export const DetailsSectionStyled = styled("div")({
 
 export const SelectStyled = styled("div")<{
   fixed?: boolean;
-  isBannerOpen: boolean;
+  isBannerOpen?: boolean;
 }>(({ fixed, isBannerOpen }) => ({
   display: "flex",
   flexDirection: "column",

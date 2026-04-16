@@ -7,7 +7,7 @@ type Language = keyof typeof data;
 
 type LanguageSelectProps = {
   fixed?: boolean;
-  isBannerOpen: boolean;
+  isBannerOpen?: boolean;
 };
 
 export const LanguageSelectButton = ({
