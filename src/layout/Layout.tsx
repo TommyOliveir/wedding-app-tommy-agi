@@ -6,7 +6,7 @@ import data from "../data.json";
 import Countdown from "react-countdown";
 import { createRenderer } from "./countDown/CountDownRenderer";
 import type { Language } from "../context/LanguageContext";
-// import { useState } from "react";
+import { useState } from "react";
 import { motion } from "motion/react";
 // import {
 //   EnvelopeImage,
@@ -14,8 +14,8 @@ import { motion } from "motion/react";
 //   EnvelopeImageWrapper,
 //   EnvelopeImageWrapper2,
 // } from "./styles";
-// import Alert from "@mui/material/Alert";
-// import Stack from "@mui/material/Stack";
+import Alert from "@mui/material/Alert";
+import Stack from "@mui/material/Stack";
 
 interface LayoutProps {
   isOpen: boolean;
@@ -24,24 +24,15 @@ interface LayoutProps {
 
 export const Layout = ({ isOpen, language }: LayoutProps) => {
   // const [step, setStep] = useState(0);
-  // const [isBannerOpen, setIsBannerOpen] = useState(true);
+  const [isBannerOpen, setIsBannerOpen] = useState(true);
 
-  // const isWeddingDay =
-  //   new Date().toDateString() === new Date("2026-04-14").toDateString();
+  const labels = {
+    english: ["Please check the Mass Guide to follow."],
+    italiano: ["Consulta la guida della Messa per seguire la cerimonia."],
+    magyar: ["Kérjük, kövesd a misekönyvet a szertartás alatt."],
+  };
 
-  // const labels = {
-  //   english: [
-  //     "Today is the Wedding Day! Please check the Mass Guide to follow.",
-  //   ],
-  //   italiano: [
-  //     "ITToday is the Wedding Day! Please check the Mass Guide to follow.",
-  //   ],
-  //   magyar: [
-  //     "HUToday is the Wedding Day! Please check the Mass Guide to follow.",
-  //   ],
-  // };
-
-  // const [banner] = labels[language];
+  const [banner] = labels[language];
 
   // useEffect(() => {
   //   const timer1 = setTimeout(() => setStep(1), 1500); // image 2
@@ -87,26 +78,22 @@ export const Layout = ({ isOpen, language }: LayoutProps) => {
       transition={{ duration: 3 }}
     >
       {!isOpen && <LanguageSelect fixed />}
-      {/* {isBannerOpen && isWeddingDay && (
+      {isBannerOpen && (
         <Stack sx={{ width: "100%" }} spacing={2}>
           <Alert
             severity="info"
             onClose={() => setIsBannerOpen(false)}
             sx={{
-              position: "fixed",
-              top: 0,
-              left: 0,
-              right: 0,
-              zIndex: 99999999999,
+              pl: { xs: 2, md: "8rem" }, // 👈 mobile small, desktop big
             }}
           >
-            {banner}
+            {banner}{" "}
             <a href="/test.pdf" target="_blank" rel="noopener noreferrer">
-              Mass Guide
+              Mass/Missal
             </a>
           </Alert>
         </Stack>
-      )} */}
+      )}
       <Hero />
       {/* <Details title="RSVP">
         <p>{data[language].rsvp}</p>
