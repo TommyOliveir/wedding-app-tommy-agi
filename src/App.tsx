@@ -7,7 +7,7 @@ import { Layout } from "./layout/Layout";
 import Modal from "./components/modal/Modal";
 import { useLanguage } from "./hooks/useLanguage";
 import data from "./data.json";
-import { LanguageSelect } from "./components/LanguageSelect";
+import { LanguageSelectButton } from "./components/LanguageSelectButton";
 
 function App() {
   const [isOpenEnvelope, setIsOpenEnvelope] = useState<boolean>(false);
@@ -21,7 +21,7 @@ function App() {
       <Envelope onOpen={() => setIsOpenEnvelope(true)} />
       <Modal isOpen={isOpen} onClose={() => setIsOpen(false)}>
         <h4>{data[language].modalSelectLanguage}</h4>
-        <LanguageSelect />
+        <LanguageSelectButton />
         <p>{data[language].modalTitle}</p>
       </Modal>
     </>

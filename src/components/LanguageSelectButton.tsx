@@ -7,9 +7,13 @@ type Language = keyof typeof data;
 
 type LanguageSelectProps = {
   fixed?: boolean;
+  isBannerOpen: boolean;
 };
 
-export const LanguageSelect = ({ fixed }: LanguageSelectProps) => {
+export const LanguageSelectButton = ({
+  fixed,
+  isBannerOpen,
+}: LanguageSelectProps) => {
   const { language, setLanguage } = useLanguage();
 
   const handleChange = (event: ChangeEvent<HTMLSelectElement>) => {
@@ -18,7 +22,7 @@ export const LanguageSelect = ({ fixed }: LanguageSelectProps) => {
   };
 
   return (
-    <SelectStyled fixed={fixed}>
+    <SelectStyled fixed={fixed} isBannerOpen={isBannerOpen}>
       <select id="language-select" value={language} onChange={handleChange}>
         {(Object.keys(data) as Language[]).map((lang) => (
           <option key={lang} value={lang}>

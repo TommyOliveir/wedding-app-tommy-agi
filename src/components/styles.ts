@@ -166,7 +166,10 @@ export const DetailsSectionStyled = styled("div")({
 //   },
 // });
 
-export const SelectStyled = styled("div")<{ fixed?: boolean }>(({ fixed }) => ({
+export const SelectStyled = styled("div")<{
+  fixed?: boolean;
+  isBannerOpen: boolean;
+}>(({ fixed, isBannerOpen }) => ({
   display: "flex",
   flexDirection: "column",
   gap: "0.5rem",
@@ -174,17 +177,17 @@ export const SelectStyled = styled("div")<{ fixed?: boolean }>(({ fixed }) => ({
   width: "200px",
   margin: "0.5rem 0",
 
-  // Apply fixed positioning only when "fixed" prop is true
+  // Apply fixed positioning only when "fixed" prop is true, this is when button not use in modal
   ...(fixed && {
     position: "fixed",
-    top: "1rem",
+    top: isBannerOpen ? "4rem" : "1rem",
     right: "1rem",
     zIndex: 99999999,
   }),
 
   "@media (min-width: 600px)": {
     left: "1rem",
-    top: "1rem",
+    top: isBannerOpen ? "4rem" : "1rem",
   },
 
   "& select": {

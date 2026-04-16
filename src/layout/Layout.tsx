@@ -1,6 +1,6 @@
 import { Details } from "../components/Details";
 import { Hero } from "../components/Hero";
-import { LanguageSelect } from "../components/LanguageSelect";
+import { LanguageSelectButton } from "../components/LanguageSelectButton";
 import { Footer } from "./footer/Footer";
 import data from "../data.json";
 import Countdown from "react-countdown";
@@ -77,14 +77,14 @@ export const Layout = ({ isOpen, language }: LayoutProps) => {
       animate={{ opacity: 1 }}
       transition={{ duration: 3 }}
     >
-      {!isOpen && <LanguageSelect fixed />}
+      {!isOpen && <LanguageSelectButton fixed isBannerOpen={isBannerOpen} />}
       {isBannerOpen && (
         <Stack sx={{ width: "100%" }} spacing={2}>
           <Alert
             severity="info"
             onClose={() => setIsBannerOpen(false)}
             sx={{
-              pl: { xs: 2, md: "8rem" }, // 👈 mobile small, desktop big
+              pl: { xs: 2, md: "1rem" }, // 👈 mobile small, desktop big
             }}
           >
             {banner}{" "}
